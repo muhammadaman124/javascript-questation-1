@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+
+    <h2>Random Number Generator</h2>
+
+    <button id="generateBtn">Generate Number</button>
+
+    <p id="result">Number yahan show hoga.</p>
+
+    <script>
+        document.getElementById("generateBtn")
+            .addEventListener("click", function() {
+
+                let number = Math.floor(Math.random() * 100) + 1;
+
+                if (number > 50) {
+                    document.getElementById("result").innerHTML =
+                        number + " - High Number";
+                } else {
+                    document.getElementById("result").innerHTML =
+                        number + " - Low Number";
+                }
+
+            });
+    </script>
+
+</body>
+</html>
